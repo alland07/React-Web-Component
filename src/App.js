@@ -12,4 +12,7 @@ function App() {
 
 export default App;
 
-customElements.define('react-wbc-checkbox', App);
+export const createDefine = () => {
+  customElements.define('react-wbc-checkbox', App);
+}
+
