@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -12,7 +11,12 @@ function App() {
 
 export default App;
 
-export const createDefine = () => {
-  customElements.define('react-wbc-checkbox', App);
+class RenderWBC extends HTMLElement {
+  render(){
+    <App/>
+  }
 }
 
+export const createDefine = () => {
+  customElements.define('react-wbc-checkbox', RenderWBC);
+}
